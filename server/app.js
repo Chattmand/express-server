@@ -15,7 +15,10 @@ app.get('/', (req, res)=>{
 	res.status(200).send("<h1>'It's Workin'</h1>");
 });
 
-// finally export the express application
+//finally export the express application
+app.get('/data', function(req, res){
+    res.send(topSpots)
+})
 // app.listen(PORT, (error) =>{
 // 	if(!error)
 // 		console.log("Server is Successfully Running, and App is" +
@@ -23,5 +26,5 @@ app.get('/', (req, res)=>{
 // 	else
 // 		console.log("Error occurred, server can't start", error);
 // 	}
-//);
+// );
 module.exports = app;
